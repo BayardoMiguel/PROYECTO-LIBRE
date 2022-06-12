@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dbe4c68c-6849-4218-8873-0e7d3d6db952">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     proveedores.`idProveedor` AS proveedores_idProveedor,
+     proveedores.`NombreProveedor` AS proveedores_NombreProveedor,
+     proveedores.`ApellidoProveedor` AS proveedores_ApellidoProveedor,
+     proveedores.`CorreoProveedor` AS proveedores_CorreoProveedor,
+     proveedores.`CelularProveedor` AS proveedores_CelularProveedor
+FROM
+     `proveedores` proveedores]]>
+	</queryString>
+	<field name="proveedores_idProveedor" class="java.lang.Integer"/>
+	<field name="proveedores_NombreProveedor" class="java.lang.String"/>
+	<field name="proveedores_ApellidoProveedor" class="java.lang.String"/>
+	<field name="proveedores_CorreoProveedor" class="java.lang.String"/>
+	<field name="proveedores_CelularProveedor" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="168" y="14" width="184" height="26" uuid="c22443d3-1598-4cfc-a475-d01ce246ec14"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Reporte Proveedores]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b80076c8-8bf7-411b-8062-625b213b44ab"/>
+				<text><![CDATA[proveedores_idProveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="2" width="100" height="20" uuid="1b3d09c0-782c-4a9f-b43a-559c9f52e808"/>
+				<text><![CDATA[proveedores_NombreProveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="2" width="100" height="20" uuid="45dcbb54-2861-44d4-b316-1dfdbb77fc25"/>
+				<text><![CDATA[proveedores_ApellidoProveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="2" width="100" height="20" uuid="269a6aac-beb5-46ed-94aa-97318b21d634"/>
+				<text><![CDATA[proveedores_CorreoProveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="2" width="100" height="20" uuid="b653e714-5515-41f8-9b9c-a3478cb42fdc"/>
+				<text><![CDATA[proveedores_CelularProveedor]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="3" width="100" height="20" uuid="911bb5d4-28ef-4a2e-9e69-28beb16e33a6"/>
+				<textFieldExpression><![CDATA[$F{proveedores_idProveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="3" width="100" height="20" uuid="724a753d-f808-457a-96c4-1c818a29457d"/>
+				<textFieldExpression><![CDATA[$F{proveedores_NombreProveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="3" width="100" height="20" uuid="07d0e70f-6957-4176-a737-e8f9dacf85a2"/>
+				<textFieldExpression><![CDATA[$F{proveedores_ApellidoProveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="3" width="100" height="20" uuid="ffe34d0e-a094-4795-9fa3-9f4aeb90e1d3"/>
+				<textFieldExpression><![CDATA[$F{proveedores_CorreoProveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="3" width="100" height="20" uuid="ffd40341-a687-4c7f-bbb6-afd32b16eb21"/>
+				<textFieldExpression><![CDATA[$F{proveedores_CelularProveedor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
